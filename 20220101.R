@@ -11,7 +11,7 @@ library(cowplot)
 
 ###########################################################################################################
 ###导入的处理过后的数据####################################################################################
-df <- data.frame(read_excel("G:/0RUC/0课件/统计基础/CLHLS/Rcode/trans_depression.xlsx"))
+df <- data.frame(read_excel("trans_depression.xlsx"))
 df <- df %>% select(-(...1:id))%>% 
   mutate(depression_score=as.integer(df$depression>=10))%>%
   select(-starts_with("b3"))
